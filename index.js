@@ -20,6 +20,3 @@ function calculateAge() {
   document.getElementById("btn2").innerHTML = `${month}`;
   document.getElementById("btn3").innerHTML = `${day}`;
 }
-$(function() {
-  $("#input-box").datepicker();
-});
