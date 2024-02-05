@@ -20,3 +20,15 @@ function calculateAge() {
   document.getElementById("btn2").innerHTML = `${month}`;
   document.getElementById("btn3").innerHTML = `${day}`;
 }
+
+document.getElementById("input-box").addEventListener("blur", function() {
+  var inputValue = this.value.trim();
+  if (!isValidDateFormat(inputValue)) {
+    this.value = ""; // Clear the input field if the date is not valid
+  }
+});
+
+function isValidDateFormat(dateString) {
+  var regex = /^\d{4}-\d{2}-\d{2}$/;
+  return regex.test(dateString);
+}
